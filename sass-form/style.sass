@@ -1,0 +1,95 @@
+.new
+  color: #ff7b29
+  font-weight: bold
+  span
+    text-transform: uppercase
+img
+    width: 50px
+    height: 50px
+    
+.portfolio
+  border: 1px solid #9799a7
+  ul
+    list-style: none
+  li
+    float: left
+div
+  font:
+    family: Baskerville, Palatino, serif
+    style: italic
+    weight: normal
+
+.container
+  width: 960px
+  @media screen and (max-width: 960px)
+    width: 100%
+
+color
+    color: invert(#fff)
+    color: complement(#cccccc)
+    color: mix(#8ec63f, #fff)
+    color: mix(#8ec63f, #fff, 10%)
+    color: grayscale(#8ec63f)
+
+a
+  color: #0087cc
+  &:hover
+    color: #ff7b29
+
+.btn
+  background: linear-gradient(#fff, #9799a7)
+  .no-cssgradients &
+    background: url("gradient.png") 0 0 repeat-x
+
+/* Normal comment */
+div
+  background: #333
+// Omitted comment
+strong
+  display: block
+
+$font-base: 1em
+$serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif
+
+p
+  font: $font-base $serif
+
+$location: chicago
+$offset: left
+
+.#{$location}
+  #{$offset}: 20px
+
+section
+    color: #8ec63f + #666
+    color: #8ec63f * 2
+    color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
+    color: change-color(#8ec63f, $red: 60, $green: 255)
+    color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)
+    color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%)
+
+.alert
+  border-radius: 10px
+  padding: 10px 20px
+
+.alert-error
+  @extend .alert
+  background: #f2dede
+  color: #b94a48
+
+%alert
+  border-radius: 10px
+  padding: 10px 20px
+
+.alert-error
+  @extend %alert
+  background: #f2dede
+  color: #b94a48
+
+h2
+  color: #9c6
+  span
+    text-decoration: underline
+
+.sub-heading
+  @extend h2

@@ -1,0 +1,53 @@
+!!! 5
+%head
+  %link{:href => "style.css", :rel => "stylesheet"}
+%body
+  #wrapper
+    %form{:action => "", :method => "post"}
+      %fieldset
+        %legend Register Seven Form
+        %div
+          %input{:name => "ID", :placeholder => "User-Id", :type => "text"}/
+        %div
+          %input{:name => "first_name", :placeholder => "Name", :type => "text"}/
+        /
+          <div>
+          <input type="text" name="last_name" placeholder="Zip-code" />
+          </div>
+        %div
+          %input{:name => "Adress", :placeholder => "Adress", :type => "text"}/
+        %div
+          %input{:name => "first_name", :placeholder => "Password", :type => "password"}/
+        %div
+          %input{:name => "email", :placeholder => "Email", :type => "text"}/
+        .area
+          %label{:for => ""} Sex :
+          %input{:name => "unique", :type => "radio"}/
+          Male
+          %input{:name => "unique", :type => "radio"}/
+          Female
+          %br/
+        .area
+          %label{:for => ""} Language :
+          = succeed "English" do
+            %input{:name => "uniq", :type => "checkbox"}/
+          = succeed "French" do
+            %input{:name => "uniq", :type => "checkbox"}/
+          %br/
+        .area.area1
+          %label{:for => ""} Counrty :
+          %select{:id => "", :name => "country", :required => ""}
+            %option{:value => "5"} Please select a country
+            %option{:value => "5"} Cameroon
+            %option{:value => "5"} Gabon
+            %option{:value => "5"} Nigeria
+        %br/
+        .area.area1
+          %div
+            .small Welcome at Seven Academy Type something here
+            %textarea{:name => "message", :placeholder => "Message"}
+          %input{:name => "submit", :type => "submit", :value => "Submit"}/
+
+
+
+
